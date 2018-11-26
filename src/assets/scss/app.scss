@@ -1,0 +1,88 @@
+@import url("https://use.typekit.net/tjr8jnh.css");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    height: 100vh;
+    background: #5C258D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#app {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+
+    .toggle {
+        color: white;
+        font-size: 18px;
+        font-family: Raleway;
+        font-weight: 300;
+        background: none;
+        border: solid rgba(255,255,255, 0.4);
+        padding: 18px 34px;
+        margin-top: 52px;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            background: white;
+            color: #5C258D;
+            font-weight: bold;
+        }
+    }
+}
+
+h1 {
+    font-family: Raleway;
+    font-size: 54px;
+}
+
+h3 {
+    font-family: Rig-solid-bold-fill;
+    font-size: 180px;
+    text-align: center;
+    margin: 0;
+    color: #fafafa;
+
+    .positive-observation {
+        color: #5bcf84;
+
+    }
+
+    .negative-observation {
+        color: #cf5b5b
+    }
+}
+
+p {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #fafafa;
+
+    span {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    a {
+        color: adjust-hue($color: #5C258D, $degrees: 170);
+        text-decoration: none;
+    }
+}
+
+.comparison {
+    font-size: 16px;
+    margin: 12px 0px 0px;
+    font-style: italic;
+}

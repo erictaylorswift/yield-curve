@@ -5,10 +5,11 @@ import VueAxios from 'vue-axios'
 import { store } from './store.js'
 import './assets/scss/app.scss'
 import VeLine from 'v-charts/lib/line.common'
-
+import Vuex from 'vuex'
 
 Vue.use(VueAxios, axios)
 Vue.component(VeLine.name, VeLine)
+Vue.use(Vuex)
 
 
 new Vue({

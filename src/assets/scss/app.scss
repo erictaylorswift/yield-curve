@@ -1,16 +1,48 @@
 @import url("https://use.typekit.net/tjr8jnh.css");
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 
 body {
-    height: 100vh;
-    background: #5C258D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    // height: 100vh;
+    background: #F9F9F9;
 }
 
-#app {
-    height: 100vh;
+a {
+    font-family: Raleway;
+    text-decoration: none;
+    color: #B0B0B0;
+    transition: 0.3s;
+
+    &:hover {
+        color: #0A7EAF;
+        text-decoration: underline;
+    }
+}
+
+#nav {
+    width: 70%;
+    height: 104px;
+    padding-top: 44px;
+    margin: 0 auto;
+
+    a {
+        margin: 0;
+        font-size: 12px;
+        font-family: Raleway;
+    }
+   
+    p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .navItemLeft {
+        float: left;
+    }
+
+    .navItemRight {
+        float: right;
+    }
 }
 
 .container {
@@ -21,23 +53,103 @@ body {
     align-content: center;
     align-items: center;
 
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
     .toggle {
-        color: white;
+        color: #5C258D;
         font-size: 18px;
         font-family: Raleway;
         font-weight: 300;
         background: none;
-        border: solid rgba(255,255,255, 0.4);
+        border: solid #5C258D;
         padding: 18px 34px;
         margin-top: 52px;
         cursor: pointer;
         transition: .3s;
+        margin: 0 auto;
 
         &:hover {
-            background: white;
-            color: #5C258D;
+            background: #5bcf84;
+            color: #F9F9F9;
             font-weight: bold;
+            border: solid #5bcf84;
         }
+    }
+
+    .shares {
+        margin-bottom: 52px;
+        display: inline-flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+
+        .twitter {
+            margin: 0 12px;
+            opacity: .5;
+
+            i {
+                color: #080808;
+                font-size: 25px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .linkedIn {
+            opacity: .5;
+
+            i {
+                color: #080808;
+                font-size: 25px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .facebook {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            opacity: .5;
+    
+            &:hover {
+                opacity: 1;
+            }
+    
+            .facebookShare {
+                border: solid #080808;
+                border-width: thin;
+                font-family: Raleway;
+                color: #080808;
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+    
+            i {
+                color: #080808;
+                font-size: 25px;
+            }
+    
+        }
+    }
+
+    
+
+    .vertLine {
+        border: solid #000000;
+        border-width: thin;
+        height: 422px;
+        opacity: 0.2;
+        margin: 32px 0;
     }
 }
 
@@ -51,7 +163,7 @@ h3 {
     font-size: 180px;
     text-align: center;
     margin: 0;
-    color: #fafafa;
+    color: #080808;
 
     .positive-observation {
         color: #5bcf84;
@@ -65,10 +177,10 @@ h3 {
 
 p {
     font-family: Raleway, sans-serif;
-    margin: 0;
+    margin-top: -22px;
     font-size: 20px;
     text-align: center;
-    color: #fafafa;
+    color: #474747;
 
     span {
         font-weight: 700;
@@ -83,6 +195,26 @@ p {
 
 .comparison {
     font-size: 16px;
-    margin: 12px 0px 0px;
+    margin-top: -10px;
     font-style: italic;
+    margin-bottom: 32px;
+}
+
+#yield-spread {
+
+    .smallHeader {
+        font-size: 16px;
+        text-align: center;
+        color: #B0B0B0;
+        line-height: 21px;
+        margin: 77px 0 101px 0;
+    }
+
+    p {
+        margin: 0 auto;
+        font-size: 37.5px;
+        width: 66%;
+        text-align: left;
+        padding-bottom: 71px;
+    }
 }

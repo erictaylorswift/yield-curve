@@ -13,6 +13,7 @@
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
     "echarts": "^4.2.0-rc.2",
+    "firebase": "^5.5.9",
     "highcharts-vue": "^1.2.0",
     "moment": "^2.22.2",
     "v-charts": "^1.19.0",

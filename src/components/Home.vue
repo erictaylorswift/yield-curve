@@ -1,16 +1,30 @@
 <template>
     <div  class="container">
-        <div v-if="!graph">
+        <div v-if="!graph" class="wrapper">
             <h3 v-if="currentObservations.yield > 0"><span class="positive-observation">+</span> {{ currentObservations.yield }}</h3>
             <h3 v-else><span class="negative-observation">-</span> {{ currentObservations.yield }}</h3>
             <p><span>tresury yield indicator</span> as of <a href="https://fred.stlouisfed.org/series/T10Y2YM"> {{ currentObservations.date }}</a></p>
             <p class="comparison">{{ comparisonObservations.difference }} from {{ comparisonObservations.date }} </p>
-            <button class="toggle" @click="showGraph">Graph</button>
         </div>
-        <div v-else>
+        <div v-else class="wrapper">
             <ve-line :data="chartData" width="600px" :settings="chartSettings" :textStyle="options" :grid="grid" :legend-visible="false" ></ve-line>
-            <button class="toggle" @click="hideGraph">Hide graph</button>
         </div>
+         <div class="shares">
+            <div class="facebook">
+                <i class="fab fa-facebook" ></i>
+                <a class="facebookShare"> SHARE</a>
+            </div>
+            <div class="twitter">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="linkedIn">
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+        <button v-if="!graph" class="toggle" @click="showGraph">Graph</button>
+        <button v-else class="toggle" @click="hideGraph">Hide graph</button>
+        
+        <div class="vertLine"></div>
     </div>
 </template>
 

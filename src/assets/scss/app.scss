@@ -1,10 +1,13 @@
 @import url("https://use.typekit.net/tjr8jnh.css");
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
+*:focus {outline:none !important}
 
 body {
     // height: 100vh;
-    background: #F9F9F9;
+    background: #FFFFFF;
 }
 
 a {
@@ -19,21 +22,68 @@ a {
     }
 }
 
+p {
+    color: #808080 !important;
+}
+
+#app {
+    padding-bottom: 64px;
+}
+
 #nav {
     width: 70%;
     height: 104px;
-    padding-top: 44px;
+    padding-top: 33px;
     margin: 0 auto;
+
+    .bp-dropdown {
+        float: right;
+    }
+    .bp-dropdown__btn--active {
+        background-color: #FFFFFF;
+    }
+    .bp-dropdown__btn {
+        border: none;
+        font-family: Montserrat;
+        font-size: 12px;
+        margin: 0;
+        padding: 0 12px;
+        float: right;
+        color: #B0B0B0;
+
+        i {
+            color: #cf5b5b;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+    }
+
+    .bp-dropdown__body {
+        padding: 16px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            text-align: left;
+            padding: 4px;
+        }
+    }
 
     a {
         margin: 0;
         font-size: 12px;
-        font-family: Raleway;
+        font-family: Montserrat;
     }
    
     p {
         margin: 0;
         font-size: 12px;
+        font-family: Montserrat;
     }
 
     .navItemLeft {
@@ -42,6 +92,7 @@ a {
 
     .navItemRight {
         float: right;
+
     }
 }
 
@@ -56,6 +107,7 @@ a {
     .wrapper {
         display: flex;
         flex-direction: column;
+        // min-height: 384px;
     }
 
     .toggle {
@@ -65,18 +117,31 @@ a {
         font-weight: 300;
         background: none;
         border: solid #5C258D;
+        border-width: thin;
         padding: 18px 34px;
         margin-top: 52px;
         cursor: pointer;
-        transition: .3s;
+        transition: .4s;
         margin: 0 auto;
 
         &:hover {
             background: #5bcf84;
-            color: #F9F9F9;
+            color: #FFFFFF;
             font-weight: bold;
             border: solid #5bcf84;
+            border-width: thin;
         }
+
+    }
+
+    .toggle:active {
+        border: solid #5C258D;
+        border-width: thin;
+    }
+
+    .toggle:focus {
+        border: solid #5C258D;
+        border-width: thin;
     }
 
     .shares {
@@ -88,7 +153,8 @@ a {
 
         .twitter {
             margin: 0 12px;
-            opacity: .5;
+            opacity: .4;
+            transition: .3s;
 
             i {
                 color: #080808;
@@ -96,12 +162,13 @@ a {
             }
 
             &:hover {
-                opacity: 1;
+                opacity: .6;
             }
         }
 
         .linkedIn {
-            opacity: .5;
+            opacity: .4;
+            transition: 0.3s;
 
             i {
                 color: #080808;
@@ -109,7 +176,7 @@ a {
             }
 
             &:hover {
-                opacity: 1;
+                opacity: .6;
             }
         }
 
@@ -119,10 +186,11 @@ a {
             justify-content: center;
             align-content: center;
             align-items: center;
-            opacity: .5;
-    
+            opacity: .4;
+            transition: .3s;
+
             &:hover {
-                opacity: 1;
+                opacity: .6;
             }
     
             .facebookShare {
@@ -147,7 +215,7 @@ a {
     .vertLine {
         border: solid #000000;
         border-width: thin;
-        height: 422px;
+        height: 360px;
         opacity: 0.2;
         margin: 32px 0;
     }
@@ -188,7 +256,7 @@ p {
     }
 
     a {
-        color: adjust-hue($color: #5C258D, $degrees: 170);
+        color: #0A7EAF;
         text-decoration: none;
     }
 }
@@ -198,23 +266,142 @@ p {
     margin-top: -10px;
     font-style: italic;
     margin-bottom: 32px;
+
+    .redArrow {
+        color: #cf5b5b;
+        font-size: 34px;
+    }
+
+    .greenArrow {
+        color: #5bcf84;
+        font-size: 34px;
+    }
 }
 
 #yield-spread {
+
+    width: 60%;
+    display: block;
+    margin: 0 auto;
 
     .smallHeader {
         font-size: 16px;
         text-align: center;
         color: #B0B0B0;
         line-height: 21px;
-        margin: 77px 0 101px 0;
+        margin: 77px 0 70px 0;
+        font-family: Montserrat;
     }
 
-    p {
+    .pInfo {
         margin: 0 auto;
         font-size: 37.5px;
-        width: 66%;
         text-align: left;
         padding-bottom: 71px;
+        line-height: 50px;
+    }
+
+    h2 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 25px;
+        color: #080808;
+        text-align: left;
+
+        span {
+            color: #B0B0B0;
+            font-weight: 400;
+        }
+    }
+    p {
+        font-family: Raleway;
+        font-size: 25px;
+        text-align: left;
+        padding: 22px 0;
+        line-height: 40px;
+    }
+    .quote {
+        display: flex;
+        flex-direction: row;
+
+        .quoteBlock {
+            height: 110px;
+            width: 10px;
+            background-color: #e8e8e8;
+        }
+
+        p {
+            line-height: 38px;
+            margin-left: 34px;
+
+            span {
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+h2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 25px;
+    color: #080808;
+    text-align: left;
+
+    span {
+        color: #B0B0B0;
+        font-weight: 400;
+    }
+}
+
+#newsList {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 12px 0;
+    }
+
+    li {
+        display: inline;
+        font-family: Raleway;
+        font-size: 25px;
+
+        i {
+            color: #b0b0b0;
+            font-size: 18px;
+        }
+
+        a {
+            margin-left: 16px;
+            color: #0A7EAF;
+            font-size: 25px;
+
+            i {
+                color: #0A7EAF;
+            }
+             &:hover {
+                 text-decoration: underline;
+                 color: adjust-hue($color: #0A7EAF, $degrees: 25) 
+             }
+        }
+    }
+}
+
+#footer {
+    width: 60%;
+    border-top: dotted #b0b0b0;
+    margin: 0 auto;
+    display: block;
+    margin-top: 64px;
+    padding: 16px 0;
+
+    p {
+        margin: 0;
+        text-align: left;
     }
 }

@@ -6,8 +6,10 @@ import { store } from './store.js'
 import './assets/scss/app.scss'
 import VeLine from 'v-charts/lib/line.common'
 import Vuex from 'vuex'
+import Dropdown from 'bp-vuejs-dropdown'
 
 Vue.use(VueAxios, axios)
+Vue.use(Dropdown)
 Vue.component(VeLine.name, VeLine)
 Vue.use(Vuex)
 

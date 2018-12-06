@@ -4,14 +4,19 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { store } from './store.js'
 import './assets/scss/app.scss'
-import VeLine from 'v-charts/lib/line.common'
 import Vuex from 'vuex'
 import Dropdown from 'bp-vuejs-dropdown'
+import APlayer from '@moefe/vue-aplayer'
+import VueMarkdown from 'vue-markdown'
 
 Vue.use(VueAxios, axios)
 Vue.use(Dropdown)
-Vue.component(VeLine.name, VeLine)
 Vue.use(Vuex)
+Vue.use(APlayer, {
+  defaultCover: 'https://github.com/u3u.png',
+  productionTip: true
+})
+Vue.use(VueMarkdown)
 
 
 new Vue({

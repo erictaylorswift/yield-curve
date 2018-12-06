@@ -1,6 +1,6 @@
 <template>
     <div id="newsList">
-        <h2 id="news"> <span>##</span> in the news</h2>
+        <h2 id="news"> <span>##</span> yield curves in the news</h2>
         <div v-if="articles.length">
             <ul v-for="article in articles" :key="article.id">
                 <ul>

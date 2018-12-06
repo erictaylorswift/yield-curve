@@ -3,7 +3,7 @@
         <div v-if="!graph" class="wrapper">
             <h3 v-if="currentObservations.yield > 0"><span class="positive-observation">+</span> {{ currentObservations.yield }}</h3>
             <h3 v-else><span class="negative-observation">-</span> {{ currentObservations.yield }}</h3>
-            <p><span>10 & 2 year yield spread</span> as of <a href="https://fred.stlouisfed.org/series/T10Y2YM" target="_blank"> {{ currentObservations.date }}</a></p>
+            <p><span>10 & 2 year yield spread</span> as of <a href="https://fred.stlouisfed.org/series/T10Y2Y" target="_blank"> {{ currentObservations.date }}</a></p>
             <p class="comparison">
                 <i v-if="comparisonObservations.difference > 0" class="fas fa-caret-up greenArrow"></i>
                 <i v-else class="fas fa-caret-down redArrow" ></i>
@@ -29,6 +29,7 @@
         </div>
         <button v-if="!graph" class="toggle" @click="showGraph">graph</button>
         <button v-else class="toggle" @click="hideGraph">hide graph</button>
+        <Player/>
         
         <div class="vertLine"></div>
     </div>
@@ -38,9 +39,10 @@
 import moment from 'moment'
 import { mapState } from 'vuex'
 import LineChart from './Line.js'
+import Player from './Player.vue'
 
 export default {
-    components: { LineChart },
+    components: { LineChart, Player },
     computed: {
         ...mapState(['currentObservations', 'comparisonObservations', 'observations', 'dates'])
     },
@@ -115,10 +117,6 @@ export default {
     },
     created() {
         this.$store.dispatch('getObservations');
-        // this.colors = ['#5bcf84'];
-    },
-    // mounted() {
-    //     this.fillData()
-    // }
+    }
 }
 </script>

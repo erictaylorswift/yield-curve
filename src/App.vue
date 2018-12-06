@@ -2,7 +2,10 @@
   <div id="app">
     <Nav/>
     <Home></Home>
-    <Content/>
+    <TenTwo/>
+    <Methodology/>
+    <YieldSpread/>
+    <Quote/>
     <News/>
     <Footer/>
   </div>
@@ -11,13 +14,25 @@
 <script>
 import Home from './components/Home'
 import Nav from './components/Nav'
-import Content from './components/Content'
+import Methodology from './components/Methodology'
 import News from './components/News'
 import Footer from './components/Footer'
+import YieldSpread from './components/YieldSpread'
+import TenTwo from './components/TenTwo'
+import Quote from './components/Quote'
 
 export default {
   name: 'app',
-  components: { Home, Nav, Content, News, Footer }
+  components: { 
+    Home,
+    Nav,
+    Methodology,
+    News,
+    Footer,
+    YieldSpread,
+    TenTwo,
+    Quote
+  }
 }
 </script>
 

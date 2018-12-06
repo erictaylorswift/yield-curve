@@ -24,7 +24,7 @@ export const store = new Vuex.Store({
 
                     commit('setCurrentObservations', {
                         yield: parseFloat(res.data.dataset.data[0][1]).toFixed(2),
-                        date: moment(res.data.dataset.data[0][0]).format("MMM Do, YYYY")
+                        date: moment(res.data.dataset.data[0][0]).format("MMM Do, YYYY").toLowerCase()
                     })
 
                     commit('setComparisonObservations', {
@@ -59,7 +59,7 @@ export const store = new Vuex.Store({
             },
 
             getNews({ commit }) {
-                axios.get('https://newsapi.org/v2/everything?q=+treasury"yield spread"&sortBy=popularity&apiKey=d6623976bb6e41e79e9f9c61b928a951')
+                axios.get('https://newsapi.org/v2/everything?q=+treasury"yield spread"&sortBy=popularity&language=en&apiKey=d6623976bb6e41e79e9f9c61b928a951')
                     .then(res => {
                         let results = res.data.articles;
 

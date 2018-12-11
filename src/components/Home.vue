@@ -29,8 +29,6 @@
         </div>
         <button v-if="!graph" class="toggle" @click="showGraph">graph</button>
         <button v-else class="toggle" @click="hideGraph">hide graph</button>
-        <Player/>
-        
         <div class="vertLine"></div>
     </div>
 </template>
@@ -39,10 +37,10 @@
 import moment from 'moment'
 import { mapState } from 'vuex'
 import LineChart from './Line.js'
-import Player from './Player.vue'
+
 
 export default {
-    components: { LineChart, Player },
+    components: { LineChart },
     computed: {
         ...mapState(['currentObservations', 'comparisonObservations', 'observations', 'dates'])
     },

@@ -3,6 +3,7 @@
     <Nav/>
     <Home></Home>
     <TenTwo/>
+    <Player/>
     <Methodology/>
     <YieldSpread/>
     <Quote/>
@@ -20,6 +21,7 @@ import Footer from './components/Footer'
 import YieldSpread from './components/YieldSpread'
 import TenTwo from './components/TenTwo'
 import Quote from './components/Quote'
+import Player from './components/Player.vue'
 
 export default {
   name: 'app',
@@ -31,7 +33,8 @@ export default {
     Footer,
     YieldSpread,
     TenTwo,
-    Quote
+    Quote,
+    Player
   }
 }
 </script>

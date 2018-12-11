@@ -59,11 +59,11 @@ export const store = new Vuex.Store({
             },
 
             getNews({ commit }) {
-                axios.get('https://newsapi.org/v2/everything?q=+treasury"yield spread"&sortBy=popularity&language=en&apiKey=d6623976bb6e41e79e9f9c61b928a951')
+                axios.get('https://newsapi.org/v2/everything?q=+treasury(yield spread OR yield curve)&sortBy=popularity&language=en&apiKey=d6623976bb6e41e79e9f9c61b928a951')
                     .then(res => {
                         let results = res.data.articles;
 
-                        console.log(results[0])
+                        // console.log(results[0])
 
                         let news = [];
                         

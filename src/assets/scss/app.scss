@@ -294,7 +294,7 @@ p {
 
 #yield-spread {
 
-    width: 60%;
+    width: 60%; 
     display: block;
     margin: 0 auto;
 
@@ -306,6 +306,12 @@ p {
             text-align: left;
             padding-bottom: 71px;
             line-height: 50px;
+        }
+
+        img {
+            // display: block;
+            // margin: 0 auto;
+            width: 80%;
         }
         
     }
@@ -424,7 +430,7 @@ h2 {
     margin-top: 32px;
     margin: 0 auto;
     margin-bottom: 72px;
-    width: 25%;
+    width: 350px;
 
 
     .podcastInfo {

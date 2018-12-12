@@ -5,6 +5,7 @@
     <TenTwo/>
     <Player/>
     <Methodology/>
+    <YieldGraph/>
     <YieldSpread/>
     <Quote/>
     <News/>
@@ -22,6 +23,7 @@ import YieldSpread from './components/YieldSpread'
 import TenTwo from './components/TenTwo'
 import Quote from './components/Quote'
 import Player from './components/Player.vue'
+import YieldGraph from './components/YieldGraph'
 
 export default {
   name: 'app',
@@ -34,7 +36,8 @@ export default {
     YieldSpread,
     TenTwo,
     Quote,
-    Player
+    Player,
+    YieldGraph
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div  class="container">
+    <div :class="[ mobile ? 'mobile-container' : 'container']">
         <div v-if="!graph" class="wrapper">
             <h3 v-if="currentObservations.yield > 0"><span class="positive-observation">+</span> {{ currentObservations.yield }}</h3>
             <h3 v-else><span class="negative-observation">-</span> {{ currentObservations.yield }}</h3>
@@ -46,6 +46,7 @@ export default {
     },
     data() {
         return {
+            mobile: false,
             datacollection: null,
             graph: false,
             chartOptions: {
@@ -115,6 +116,12 @@ export default {
     },
     created() {
         this.$store.dispatch('getObservations');
+
+            if (screen.width <= 760) {
+                this.mobile = true;
+            } else {
+                this.mobile = false
+            }
     }
 }
 </script>

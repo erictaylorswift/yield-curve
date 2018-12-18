@@ -1,5 +1,5 @@
 <template>
-    <div id="what">
+    <div :class="[mobile ? 'mobile-block' : 'block']">
         <div id="yield-spread">
             <h1 class="smallHeader">
                 # {{ this.title }}
@@ -22,8 +22,9 @@ const client = createClient()
 export default {
     data() {
         return {
+            mobile: false,
             title: '',
-            content: ''
+            content: '',
         }
     },
     components: {
@@ -44,6 +45,14 @@ export default {
             .catch((err) => {
                 console.log(err)
             })
+
+        if (screen.width <= 760) {
+            this.mobile = true;
+        } else {
+            this.mobile = false
+        }
+
+        
     }
 }
 </script>

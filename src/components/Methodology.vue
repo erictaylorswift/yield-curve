@@ -1,5 +1,5 @@
 <template>
-    <div id="yield-spread">
+    <div :class="[mobile ? 'mobile-block' : 'block']">
         <h2 id="methodology">
             <span>##</span> {{ this.title }}
         </h2>
@@ -40,6 +40,11 @@ export default {
             .catch((err) => {
                 console.log(err)
             })
+        if (screen.width <= 760) {
+            this.mobile = true;
+        } else {
+            this.mobile = false
+        }
     }
 }
 </script>

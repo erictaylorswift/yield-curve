@@ -1,5 +1,5 @@
 <template>
-    <div id="yield-spread">
+    <div :class="[mobile ? 'mobile-block' : 'block']">
         <div class="quote">
             <div class="quoteBlock"></div>
             <vue-markdown :source="content"></vue-markdown>
@@ -17,6 +17,7 @@ const client = createClient()
 export default {
     data() {
         return {
+            mobile: false,
             title: '',
             content: ''
         }
@@ -39,6 +40,12 @@ export default {
             .catch((err) => {
                 console.log(err)
             })
+
+        if (screen.width <= 760) {
+            this.mobile = true;
+        } else {
+            this.mobile = false
+        }
     }
 }
 </script>

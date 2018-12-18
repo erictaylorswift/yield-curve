@@ -1,6 +1,6 @@
 <template>
-    <div id="what">
-        <div id="yield-spread">
+    <div id="what" v-if="!mobile">
+        <div class="block">
             <h2>
                 # {{ this.title }}
             </h2>
@@ -22,6 +22,7 @@ const client = createClient()
 export default {
     data() {
         return {
+            mobile: false,
             title: '',
             content: ''
         }
@@ -44,6 +45,12 @@ export default {
             .catch((err) => {
                 console.log(err)
             })
+
+        if (screen.width <= 760) {
+        this.mobile = true;
+        } else {
+            this.mobile = false
+        }
     }
 }
 </script>

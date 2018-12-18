@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
-        <a href="#what" class="navItemLeft"><i class="fas fa-info-circle"></i> what's a yield spread?</a>
-        <dropdown :close-on-click="true" :is-icon="false" :x="12" :y="8">
+        <a href="#what" class="navItemLeft"  v-if="!isMobile()"><i class="fas fa-info-circle"></i> what's a yield spread?</a>
+        <dropdown :close-on-click="true" :is-icon="false" :x="12" :y="8" v-if="!isMobile()">
             <template slot="btn" :class-name="'dropdown'">extras <i class="fas fa-rocket"></i></template>
             <template slot="body">
                 <ul>
@@ -23,6 +23,15 @@
 <script>
 import Dropdown from 'bp-vuejs-dropdown'
 export default {
-    components: { Dropdown }
+    components: { Dropdown },
+    methods: {
+        isMobile() {
+            if (screen.width <= 760) {
+                return true;
+            } else {
+                return false
+            }
+        }
+    }
 }
 </script>

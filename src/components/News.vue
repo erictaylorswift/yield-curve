@@ -1,5 +1,5 @@
 <template>
-    <div id="newsList">
+    <div :class="[mobile ? 'mobile-newsList' : 'newsList']">
         <h2 id="news"> <span>##</span> yield curves in the news</h2>
         <div v-if="articles.length">
             <ul v-for="article in articles" :key="article.id">
@@ -16,12 +16,23 @@
 import { mapState } from 'vuex';
 
 export default {
+    data() {
+        return {
+            mobile: false,
+        }
+    },
     computed: {
         ...mapState(['articles'])
     },
 
     created() {
-        this.$store.dispatch('getNews')
+        this.$store.dispatch('getNews');
+
+        if (screen.width <= 760) {
+            this.mobile = true;
+        } else {
+            this.mobile = false
+        }
     },
     filters: {
         truncate(val) {

@@ -10,7 +10,10 @@ import Dropdown from 'bp-vuejs-dropdown'
 import APlayer from '@moefe/vue-aplayer'
 import VueMarkdown from 'vue-markdown'
 
+var SocialSharing = require('vue-social-sharing');
+
 Vue.use(VueAxios, axios)
+Vue.use(SocialSharing)
 Vue.use(Dropdown)
 Vue.use(Vuex)
 Vue.use(APlayer, {

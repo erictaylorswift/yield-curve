@@ -15,18 +15,21 @@
             <!-- <h2>10y2y yield spread</h2> -->
             <line-chart :chart-data="datacollection" :options="chartOptions" width="860" height="312"></line-chart>
         </div>
-         <div class="shares">
-            <div class="facebook">
-                <i class="fab fa-facebook" ></i>
-                <a class="facebookShare"> SHARE</a>
+        <social-sharing 
+            url="yieldcurveindicator.com"
+            inline-template>
+            <div class="shares">
+                <network network="facebook" class="facebook">
+                    <i class="fab fa-facebook"></i>
+                </network>
+                <network network="twitter" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                </network>
+                <network network="linkedin" class="linkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </network>
             </div>
-            <div class="twitter">
-                <i class="fab fa-twitter"></i>
-            </div>
-            <div class="linkedIn">
-                <i class="fab fa-linkedin"></i>
-            </div>
-        </div>
+        </social-sharing>
         <button v-if="!graph" class="toggle" @click="showGraph">graph</button>
         <button v-else class="toggle" @click="hideGraph">hide graph</button>
         <div class="vertLine"></div>

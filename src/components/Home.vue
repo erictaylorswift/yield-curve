@@ -17,6 +17,9 @@
         </div>
         <social-sharing 
             url="yieldcurveindicator.com"
+            title="i ❤ the yield curve! yieldcurveindicator.com"
+            :quote='"the 10 & 2 year yield spread is " + currentObservations.yield + " as of " + currentObservations.date'
+            twitter-user="marshalletaylor"
             inline-template>
             <div class="shares">
                 <network network="facebook" class="facebook">
@@ -44,6 +47,9 @@ import LineChart from './Line.js'
 
 export default {
     components: { LineChart },
+    props: {
+        
+    },
     computed: {
         ...mapState(['currentObservations', 'comparisonObservations', 'observations', 'dates'])
     },
